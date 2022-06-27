@@ -20,8 +20,8 @@ public class ResultVo {
 
     // 默认返回成功状态码，数据对象
     public ResultVo(Object data) {
-        this.code = ResultCode.SUCCESS.getCode();
-        this.msg = ResultCode.SUCCESS.getMsg();
+        this.code = ResultCodeEnum.SUCCESS.getCode();
+        this.msg = ResultCodeEnum.SUCCESS.getMsg();
         this.data = data;
     }
 

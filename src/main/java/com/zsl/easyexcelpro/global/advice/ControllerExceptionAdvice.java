@@ -1,6 +1,6 @@
-package com.zsl.easyexcelpro.aspect;
+package com.zsl.easyexcelpro.global.advice;
 
-import com.zsl.easyexcelpro.global.result.ResultCode;
+import com.zsl.easyexcelpro.global.result.ResultCodeEnum;
 import com.zsl.easyexcelpro.global.result.ResultVo;
 import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
@@ -14,6 +14,6 @@ public class ControllerExceptionAdvice {
     public ResultVo MethodArgumentNotValidExceptionHandler(BindException e) {
         // 从异常对象中拿到 ObjectError 对象
         ObjectError objectError = e.getBindingResult().getAllErrors().get(0);
-        return new ResultVo(ResultCode.VALIDATE_ERROR, objectError.getDefaultMessage());
+        return new ResultVo(ResultCodeEnum.VALIDATE_ERROR, objectError.getDefaultMessage());
     }
 }
