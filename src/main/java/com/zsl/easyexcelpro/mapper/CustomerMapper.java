@@ -6,8 +6,10 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface CustomerMapper {
 
     CustomerMapper INSTANCES = Mappers.getMapper(CustomerMapper.class);
